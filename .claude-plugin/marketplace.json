@@ -1,0 +1,20 @@
+{
+  "name": "karpathy-rss-daily-skill",
+  "owner": {
+    "name": "Jared Liu",
+    "email": "jaredliu.ai@gmail.com"
+  },
+  "metadata": {
+    "description": "Generate daily AI briefings from Andrej Karpathy's curated RSS sources, powered by YouMind",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "karpathy-rss-daily",
+      "description": "AI skill for generating daily briefings from Karpathy's curated RSS",
+      "source": "./",
+      "strict": false,
+      "skills": ["./"]
+    }
+  ]
+}
