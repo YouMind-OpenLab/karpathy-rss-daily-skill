@@ -88,9 +88,11 @@ npx skills i YouMind-OpenLab/karpathy-rss-daily-skill
 
 **Step 2: Create a cron job**
 
-Just paste this into your OpenClaw chat:
+Just paste this into your OpenClaw chat (customize the **time** and **language** to your preference):
 
-> Set up a daily cron job at 8:00 AM that runs the karpathy-rss-daily-skill to generate an AI news briefing. Fetch the RSS feeds from https://youmind.com/rss/pack/andrej-karpathy-curated-rss, read the top stories from the past 24 hours, and send me a structured briefing with key themes, takeaways, and editor's notes.
+> Set up a daily cron job at **8:00 AM** that runs the karpathy-rss-daily-skill to generate an AI news briefing **in English**. Fetch the RSS feeds from https://youmind.com/rss/pack/andrej-karpathy-curated-rss, read the top stories from the past 24 hours, and send me a structured briefing with key themes, takeaways, and editor's notes.
+
+Change `8:00 AM` to your preferred time, and `in English` to any language (`in Chinese`, `in Japanese`, `in Spanish`, etc.).
 
 OpenClaw will automatically:
 - Create an isolated cron job on the schedule you specified
@@ -110,7 +112,7 @@ For those who prefer manual setup via the OpenClaw config or CLI:
   "sessionTarget": "isolated",
   "payload": {
     "kind": "agentTurn",
-    "message": "Run the karpathy-rss-daily-skill: Fetch the RSS pack from https://youmind.com/rss/pack/andrej-karpathy-curated-rss, read the top articles from the past 24h, and generate a structured daily briefing with themes, key takeaways, and editor's notes. Output in English.",
+    "message": "Run the karpathy-rss-daily-skill: Fetch the RSS pack from https://youmind.com/rss/pack/andrej-karpathy-curated-rss, read the top articles from the past 24h, and generate a structured daily briefing with themes, key takeaways, and editor's notes. Output in English. (Change to: Chinese, Japanese, Spanish, etc.)",
     "timeoutSeconds": 180
   },
   "delivery": { "mode": "announce" }
